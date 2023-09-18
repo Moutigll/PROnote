@@ -1,0 +1,24 @@
+{
+    "name": "PROnote",
+    "manifest_version": 3,
+    "version": "1.0",
+    "description": "nothing interesting",
+    "permissions": ["tabs", "scripting","cookies"],
+    "host_permissions": ["https://*.index-education.net/*"],
+    "content_scripts": [
+        {
+            "matches": ["https://*.index-education.net/*"],
+            "js": ["Script.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "action": {
+        "default_popup" : "popup.html",
+        "default_icon": {
+            "64": "assets/logo-action.png"
+        }
+    },
+    "icons": {
+        "64": "assets/logo-action.png"
+    }
+}
