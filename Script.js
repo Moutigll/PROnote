@@ -1,39 +1,23 @@
-setTimeout(() => {
 
-  // Modification de theme
-
-  const background = document.getElementById("GInterface.Instances[2]_defaut_");
-  background.style.backgroundColor = '#0e1117';
-
-  const flex_contain = document.querySelectorAll('.flex-contain ');
-  flex_contain.forEach(function (elem) {elem.style.color = '#e7edf3';});
-
-  const filtre_conteneur = document.querySelectorAll('.filtre-conteneur');
-  filtre_conteneur.forEach(function (elem) {elem.style.color = '#e7edf3'; elem.style.backgroundColor = "#171b22"});
-
-  const edt = document.getElementById("id_64");
-  edt.style.backgroundColor = '#0e1117';
-
-  const edt_header = document.querySelector('[title="Emploi du temps"]');
-  edt_header.style.backgroundColor = '#171b22';
-
-  const edt_border = document.getElementById("GInterface.Instances[2]_colonne_3")
-  edt_border.style.border = "2px solid #31363d"
-
-  const Travaux_à_faire_des_7_prochains_jours = document.querySelector('[title="Travaux à faire des 7 prochains jours"]');
-  Travaux_à_faire_des_7_prochains_jours.style.backgroundColor = '#171b22';
-  
-  const homeworks_border = document.getElementById("GInterface.Instances[2]_colonne_2")
-  homeworks_border.style.border = "2px solid #31363d"
-
-  const homeworks = document.getElementById("id_86");
-  homeworks.style.backgroundColor = '#0e1117';
-
-  const listitem = document.querySelectorAll('.wrap conteneur-item');
-  listitem.forEach(function (elem) {elem.style.color = '#e7edf3'; elem.style.backgroundColor = "#171b22"});
-  
-  const h4 = document.querySelectorAll('h4');
-  //h4.forEach(function (elem) {elem.style.backgroundColor = "#171b22"});
-}, 10000);
-
-
+console.log.bind(console);
+let intervalId;
+intervalId = setInterval(() => {
+  try {
+    document.querySelectorAll('[role="banner"]').forEach(function (elem) {elem.style.backgroundColor = '#171b22'; elem.style.color = '#0b4e50'});
+    document.getElementById("GInterface.Instances[2]_defaut_").style.backgroundColor = '#0e1117';
+    document.querySelectorAll('.flex-contain ').forEach(function (elem) {elem.style.color = '#e7edf3';});
+    document.querySelectorAll('.filtre-conteneur').forEach(function (elem) {elem.style.color = '#e7edf3'; elem.style.backgroundColor = "#171b22"});
+    document.querySelectorAll('.wrap conteneur-item').forEach(function (elem) {elem.style.color = '#e7edf3'; elem.style.backgroundColor = "#171b22";});
+    document.querySelectorAll('#id_86 h4').forEach(function (elem) {elem.style.backgroundColor = "#151c2f"; elem.style.border = "2px solid #2b467f"; elem.style.color = "#fff";});
+    document.querySelectorAll('.with-color').forEach(function (elem) {elem.style.color = '#e7edf3'});
+    document.querySelectorAll('.m-left').forEach(function (elem) {elem.style.color = 'rgb(125,125,125)'});
+    document.querySelectorAll('label').forEach(function (elem) {elem.className = null; elem.style.color = "#0b4e50"});
+    document.getElementById("id_83").style.color = "#e7edf3";
+    document.querySelectorAll('header').forEach(function (elem) {elem.style.backgroundColor = '#171b22'; elem.style.border = "2px solid rgb(49, 54, 61)"; elem.style.borderTopLeftRadius = "8px"; elem.style.borderTopRightRadius = "8px"});
+    document.querySelectorAll('#id_73, #id_88, #id_70, #id_49, #id_48, #id_61, #id_72, #id_64, #id_86, #id_83').forEach(function (elem) {elem.style.backgroundColor = '#0e1117'});
+    document.querySelectorAll('#id_83 h4').forEach(function (elem) {elem.style.color = "#e7edf3";});
+    clearInterval(intervalId)
+  } catch (error) {
+    
+  }
+}, 10);
